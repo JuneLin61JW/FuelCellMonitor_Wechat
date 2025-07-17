@@ -1,0 +1,2 @@
+<!--components/perms/perms.wxml-->
+<slot wx:if="{{show}}"></slot>

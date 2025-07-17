@@ -1,0 +1,20 @@
+/* pages/category/category.wxss */
+page {
+  background-color: #f1f1f1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.custom-navbar {
+  --td-navbar-color: #000;
+  --td-navbar-bg-color: #8b97b1;
+}
+
+.category-container {
+  margin: 10rpx;
+
+  .searchbox { 
+    padding: 10rpx;
+    background-color: #ffffff;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "pagination": "/components/pagination/pagination",
+    "t-search": "tdesign-miniprogram/search/search",
+    "table": "/components/table/table",
+    "action-td": "./action_td/action_td"
+  }
+}

@@ -1,0 +1,33 @@
+
+
+//通过掩码和移位获取在二进制中不同长度位数下的十进制值
+function BinarySlice(value,mask,SHR) {
+  value = (value & mask) >>> SHR
+  return value
+}
+//通过除2取余法获取每一位二进制值的数组
+function valueAtBit(num, bit) {
+  var result = []
+  while(num != 0) {
+      result.unshift(num % 2)
+      num = Math.floor(num / 2)
+  }
+  var remainLen = bit - result.length
+  if (remainLen != 0) {
+    for (var i = 0; i < remainLen; i++) {
+      result.unshift(0)
+    }
+  }
+  //console.log("result",result)
+  return result
+}
+
+// 前补零（str不能为空，否则会少一位TT）
+function fixZeroStart(str, n) {
+  return ("0" + str).slice(-n);
+}
+
+
+module.exports = {
+  
+}

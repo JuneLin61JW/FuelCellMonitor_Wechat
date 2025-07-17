@@ -1,0 +1,26 @@
+/* pages/devlog/devlog.wxss */
+.custom-navbar {
+  --td-navbar-color: #000;
+  --td-navbar-bg-color: #8b97b1;
+}
+page {
+  background-color: #f1f1f1;
+}
+
+.log-container {
+  margin: 10rpx;
+  position: relative;
+}
+.searchbox {
+  background-color: #ffffff;
+  padding: 10rpx;
+}
+.scan {
+  display: inline-block;
+  position: absolute;
+  height: 80rpx;
+  width: 80rpx;
+  z-index: 99;
+  left: 652rpx; 
+  top: 10rpx;
+}

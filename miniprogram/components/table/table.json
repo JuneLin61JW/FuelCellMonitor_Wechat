@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "zml-tr": "./components/tr/tr",
+    "zml-empty": "../empty/empty"
+  },
+  "componentGenerics": {
+    "action-td": true
+  }
+}

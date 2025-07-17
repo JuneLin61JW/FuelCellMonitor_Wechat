@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-collapse": "tdesign-miniprogram/collapse/collapse",
+    "t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
+    "levitate-menu": "/components/levitate-menu/levitate-menu",
+    "perms": "/components/perms/perms"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor":"#48a554"
+}

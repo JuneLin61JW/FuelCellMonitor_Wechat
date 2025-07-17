@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/Info/Info",
+    "pages/more/more",
+    "pages/device/device",
+    "pages/monitor/monitor",
+    "pages/devlog/devlog",
+    "pages/category/category",
+    "pages/dashboard/dashboard"
+  ],
+  "subPackages": [
+    {
+      "root": "ec-canvas",
+      "pages": [
+        "ec-canvas"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#afafaf",
+    "selectedColor": "#0099f6",
+    "backgroundColor": "#F7F8F8",
+    "list": [
+      {
+        "pagePath": "pages/monitor/monitor",
+        "text": "监测"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多"
+      },
+      {
+        "pagePath": "pages/Info/Info",
+        "text": "我的"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {},
+  "lazyCodeLoading": "requiredComponents"
+}

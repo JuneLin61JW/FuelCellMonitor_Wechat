@@ -1,0 +1,65 @@
+<!--pages/monitor/monitor.wxml-->
+<wxs module="format" src="../../utils/formatdata.wxs"></wxs>
+<t-navbar title="监测" class="custom-navbar" />
+
+<view class="box">
+  <view>
+    <view class="searchbox">
+      <image src="../../images/扫码.png" class="scan" bind:tap="scanNumber"></image>
+      <!--搜索框-->
+      <t-search
+        value="{{subTopic}}"
+        maxcharacter="15"
+        placeholder="中控号/车辆号"
+        bind:change="changeHandle"
+        bind:action-click="searchToSub"
+        bind:submit="searchToSub"
+        bind:clear="clearHandle"
+      >
+      </t-search>
+      
+    </view>
+    
+
+      <!--数据展示-->
+
+      <t-collapse default-expand-all expandIcon>
+        <!--基本信息-->
+        <t-collapse-panel class="collapse" header="基本信息" value="{{0}}">
+          <view class="table">
+            <view class="tr">
+              <view class="th_1">车辆号：</view>
+              <view class="td_3">{{CellData.bkId}}</view>
+            </view>
+            <view class="tr">
+              <view class="th_1">中控号：</view>
+              <view class="td_3">{{CellData.id}}</view>
+            </view>
+            <view class="tr">
+              <view class="th_1">版本号：</view>
+              <view class="td_3">
+                {{format.Get_Version(CellData.version)}}
+              </view>
+            </view>
+          </view>
+        </t-collapse-panel>
+      </t-collapse>
+  </view>
+
+  <view class="menu_box" style="bottom: {{menubottom}}rpx;">
+    <perms value="iot:monitor:order">
+      <levitate-menu 
+        bindmenuItemClick="menuItemClick" 
+        mainmodel="{{mainmodel}}" 
+        menulist ="{{menulist}}"
+        inner-class="menu"
+      >
+      </levitate-menu>
+    </perms>
+  </view>
+  
+  <view class="circle" style="background-color: {{StatusColor}};bottom: {{circlebottom}}rpx;">{{isOnline}}</view>
+  <view style="height: {{barheight}}rpx;"></view>
+</view>
+
+

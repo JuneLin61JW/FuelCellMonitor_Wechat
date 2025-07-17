@@ -1,0 +1,57 @@
+/**index.scss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-navbar {
+  --td-navbar-color: #2c2f3b;
+  --td-navbar-bg-color: #9da7b9c0;
+}
+
+.area {
+  flex: 1;
+  overflow-y: hidden;
+  background-color: #9da7b9c0;
+}
+
+.login-container {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  .login-form {
+    width: 650rpx;
+    max-width: 100%;
+    padding: 160rpx 35rpx 0;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .login-title {
+      font-size: 60rpx;
+      align-content: center;
+      font-weight: bold;
+      color: rgba(12, 12, 12, 0.89);
+      display: flex;
+      justify-content: center;
+      padding: 20rpx;
+    }
+    .tinput {
+      height: 50rpx;
+      border-radius: 12rpx;
+      margin-top: 25rpx;
+      background-color: #e3eef1;
+    }
+
+    .suffix {
+      display: flex;
+      align-items: center;
+      justify-content:center
+    }
+    .image {
+      width: 300rpx;
+      height: 80rpx;
+    }
+  }
+}

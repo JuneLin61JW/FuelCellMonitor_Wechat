@@ -1,0 +1,76 @@
+<!--pages/userInfo/userInfo.wxml-->
+<t-navbar title="我的" class="custom-navbar" />
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="top-bg"></view>
+  <view class="box">
+    <!--头像信息-->
+    <view class="user-info">
+      <view class="avatar">
+        <image class="head-img" src="../../images/avatar.gif"></image>
+      </view>
+      <view class="nickname">
+        {{$user.nickname}}
+      </view>
+    </view>
+    <!--用户菜单-->
+    <view>
+      <t-cell-group theme="card">
+        <t-cell title="修改密码" hover arrow bind:click="showDialog" />
+      </t-cell-group>
+    </view>
+    <view style="padding-top: 50rpx;">
+      <t-cell-group theme="card" >
+        <t-cell title="退出登录" hover arrow bind:click="logout" />
+      </t-cell-group>
+    </view>
+  </view>
+
+  <t-dialog
+    visible="{{showWithInput}}"
+    title="修改密码"
+    confirm-btn="确定"
+    cancel-btn="取消"
+    bind:confirm="confirmDialog"
+    bind:cancel="cancelDialog"
+  >
+    <t-input
+      label="原密码："
+      id="old"
+      value="{{password.oldPwd}}"
+      type="password"
+      class="dialog-input"
+      clearable
+      slot="content"
+      placeholder="请输入原密码"
+      placeholder-class="placeholder"
+      bindchange="setPwd"
+      bindclear="clearPwd"
+    />
+    <t-input
+      label="新密码："
+      id="new"
+      value="{{password.newPwd}}"
+      type="password"
+      class="dialog-input"
+      clearable
+      slot="content"
+      placeholder="请输入新密码"
+      placeholder-class="placeholder"
+      bindchange="setPwd"
+      bindclear="clearPwd"
+    />
+    <t-input
+      label="密码确认："
+      id="confirm"
+      value="{{password.confirmPwd}}"
+      type="password"
+      class="dialog-input"
+      clearable
+      slot="content"
+      placeholder="请再次输入新密码"
+      placeholder-class="placeholder"
+      bindchange="setPwd"
+      bindclear="clearPwd"
+    />
+  </t-dialog>
+</scroll-view>

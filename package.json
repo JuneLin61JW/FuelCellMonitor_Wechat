@@ -1,0 +1,17 @@
+{
+  "name": "pearlmonitor",
+  "version": "1.0.0",
+  "scripts": {},
+  "keywords": [],
+  "author": "JuneLin",
+  "license": "ISC",
+  "dependencies": {
+    "mini-stores": "^2.0.0",
+    "tdesign-miniprogram": "^1.2.4"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.12.2"
+  },
+  "main": ".eslintrc.js",
+  "description": ""
+}

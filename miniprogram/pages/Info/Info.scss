@@ -1,0 +1,98 @@
+/* pages/userInfo/userInfo.wxss */
+page {
+  height: 100vh;
+}
+
+.custom-navbar {
+  --td-navbar-color: #2c2f3b;
+  --td-navbar-bg-color: #54a8b3;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+/* 设置背景颜色 */
+.top-bg {
+  height: 200rpx;
+  background-color: #54a8b3;
+}
+
+/* 圆角盒子 */
+.box {
+  height: 80vh;
+  background-color: #f1f1f1;
+  margin-top: -100rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  padding: 0 20rpx;
+}
+
+/* 头像部分 */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+
+.avatar {
+  margin-top: -80rpx;
+  font-weight: inherit;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.avatar::after {
+  border: none;
+}
+ 
+.head-img {
+  width: 140rpx;
+  height: 140rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fbdbdc;
+}
+
+.nickname {
+  font-size: 26rpx;
+  color: grey;
+  margin: 15rpx 0;
+}
+
+.dialog-input {
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  text-align: left;
+  margin-top: 32rpx;
+  border-radius: 8rpx;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+}
+
+.placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 96rpx;
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+

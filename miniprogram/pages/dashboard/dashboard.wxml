@@ -1,0 +1,7 @@
+<!--pages/dashboard/dashboard.wxml-->
+<t-navbar title="首页" class="custom-navbar" />
+<view>首页</view>
+
+
+
+

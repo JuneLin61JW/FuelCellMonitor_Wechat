@@ -1,0 +1,20 @@
+<!--components/pagination/pagination.wxml-->
+<view wx:if="{{show}}">
+  <view class="page-control">
+    <view style="padding-left: 15rpx;">共{{total}}条</view>
+    <view class="page-control-btns">
+      <view class="page-btn {{prevBtnDis?'btn-disabled':''}}" bindtap="prevPage">上一页</view>
+      <view class="page-number" bindtap="showPagePopUp"><text>{{index}}</text>/<text>{{pageTotal}}</text></view>    
+      <view class="page-btn {{nextBtnDis?'btn-disabled':''}}" bindtap="nextPage">下一页</view>
+    </view>
+    <view class="page-container" hidden="{{!pageMask}}">
+      <view class="page-mask" bindtap="hidePagePopUp"></view>
+      <view class="page-popup">
+        <view class="page-popup-box">
+          <view class="page-line" wx:for="{{pageTotal}}" wx:for-index="idx" wx:key="*this" data-index="{{idx+1}}" bindtap="onChangePage">第{{item+1}}页</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

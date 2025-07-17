@@ -1,0 +1,101 @@
+/* pages/monitor/monitor.wxss */
+.box {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f1f1;
+}
+
+
+.custom-navbar {
+  --td-navbar-color: #2c2f3b;
+  --td-navbar-bg-color: #48a554;
+}
+
+.searchbox {
+  padding: 16rpx 90rpx 16rpx 32rpx;
+  background-color: #fcfcfc;
+  position: relative;
+}
+
+.scan {
+  display: inline-block;
+  position: absolute;
+  height: 80rpx;
+  width: 80rpx;
+  z-index: 99;
+  right: 5rpx;
+  top: 12rpx;
+}
+
+.table {
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: column;     /* 排列形式: 向下 */
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.tr {
+  width: 100%;    
+  display: flex;
+  flex-direction: row;
+}
+
+.th_1, .th_2, .th_3, .td_1, .td_2, .td_3 { /* 公有的属性 */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;            /* 自动换行 */
+  text-align: center;         /* 文本居中 */
+  justify-content:center;     /* 主轴居中 */
+  align-items: center;        /* 交叉轴居中 */
+  border-top: 1rpx solid #E6EAEE;      /* 单元格上线框 */
+  border-bottom: 1rpx solid #E6EAEE;   /* 单元格下线框 */
+  border-left: 1rpx solid #E6EAEE;     /* 单元格左线框 */
+  border-right: 1rpx solid #E6EAEE;    /* 单元格右线框 */
+  word-break: break-all;
+}
+
+.th_1, .th_2, .th_3 {
+  font-weight: 800;           /* 字体加重 */
+  background-color:#EFF3F6;   /* 背景色 */
+  color: #393C3E;
+}
+
+.td_1, .td_2, .td_3 {
+  background-color:#fbfbfc;   /* 背景色 */
+}
+
+.th_1, .td_1 {
+  width: 25%;
+}
+
+.th_2, .td_2 {
+  width: 50%;
+}
+
+.th_3, .td_3 {
+  width: 75%;
+}
+
+.menu_box {
+  position: fixed;
+  right: 5rpx;
+  text-align: center;
+}
+
+.circle {
+  position: fixed;
+  width: 60rpx;
+  height: 60rpx;
+  left: 5rpx;
+  border-radius: 100%;
+  background-color: #d9d9d9;
+  z-index: 999;
+  font-size: 20rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+

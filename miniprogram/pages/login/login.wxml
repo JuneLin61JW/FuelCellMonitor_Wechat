@@ -1,0 +1,25 @@
+<!--index.wxml-->
+
+<t-navbar title="登录" class="custom-navbar" />
+<view class="area">
+  <view class="login-container">
+    <view class="login-form">
+
+      <span class="login-title">数据管理后台</span>
+
+      <form class="formarea" catchsubmit="formSubmit" catchreset="formReset">
+        <t-input class="tinput" name="username" prefixIcon="user" type="text" placeholder="用户名" clearable />
+        <t-input class="tinput" name="password" prefixIcon="user-password"  type="password" placeholder="密码" clearable />
+        <t-input class="tinput" name="verifyCode" prefixIcon="verified" placeholder="验证码"  clearable>
+          <view slot="suffix" class="suffix" bindtap="getCaptcha">
+            <image class="image" mode="heightFix" src="{{captchaBase64}}"></image>
+          </view>
+        </t-input>   
+        <view style="border-radius: 12rpx;margin-top: 25rpx;">
+          <button style="background-color: #e3eef1;" formType="submit">登录</button>
+        </view>
+      </form>
+      
+    </view>
+  </view>
+</view>

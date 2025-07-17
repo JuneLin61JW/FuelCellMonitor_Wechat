@@ -1,0 +1,55 @@
+<!--pages/device/device.wxml-->
+<t-navbar title="设备" class="custom-navbar" left-arrow />
+<view class="device-container">
+  <view class="searchbox">
+    <image src="../../images/扫码.png" class="scan" bind:tap="scanNumber"></image>
+    <!--搜索框-->
+    <t-search
+      value="{{keywords}}"
+      maxcharacter="15"
+      placeholder="请输入中控号、车辆号等关键词"
+      style="padding: 2rpx 65rpx 2rpx 2rpx;"
+      bind:change="changeHandle"
+      bind:action-click="searchdev"
+      bind:submit="searchdev"
+      bind:clear="clearHandle"
+    >
+    </t-search>
+    
+    <view style="display: flex;">
+      <view style="width: 50%;">
+        <t-cell  title="状态：" arrow hover note="{{statusText}}" bind:click="onStatusPicker" />
+        <t-picker
+          visible="{{statusVisible}}"
+          value="{{statusValue}}"
+          title="状态筛选"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onPickerChange"
+          bindpick="onColumnChange"
+          bindcancel="onPickerCancel"
+        >
+          <t-picker-item options="{{statusPick}}"></t-picker-item>
+        </t-picker>
+      </view>
+    </view>
+
+  </view>
+
+  <table 
+    columns="{{tableColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    showTipImage="{{dataList.length===0&!getListLoading}}"
+    tableHeight = "{{tableheight}}"
+    generic:action-td="action-td" 
+    bindclickaction="handleClickAction" 
+  />
+  <pagination currentInedex="{{page}}" total="{{total}}" bind:pagingChange="pageChange"></pagination>
+
+    
+  
+</view>
+
+
+

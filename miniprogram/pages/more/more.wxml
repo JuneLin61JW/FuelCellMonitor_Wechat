@@ -1,0 +1,7 @@
+<!--pages/more/more.wxml-->
+<t-navbar title="更多" class="custom-navbar" />
+<t-grid class="block" column="{{4}}">
+  <t-grid-item text="日志" image="{{img1}}" bindclick="onClick" data-id="1" />
+  <t-grid-item text="设备" image="{{img2}}" bindclick="onClick" data-id="2" />
+  <t-grid-item text="产品" image="{{img3}}" bindclick="onClick" data-id="3" />
+</t-grid>

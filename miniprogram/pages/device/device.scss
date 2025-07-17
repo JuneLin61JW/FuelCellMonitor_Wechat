@@ -1,0 +1,34 @@
+/* pages/device/device.wxss */
+page {
+  background-color: #f1f1f1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.custom-navbar {
+  --td-navbar-color: #000;
+  --td-navbar-bg-color: #8b97b1;
+}
+
+.device-container {
+  margin: 10rpx;
+  position: relative;
+  
+
+  .searchbox { 
+    padding: 10rpx;
+    background-color: #ffffff;
+  }
+
+  .scan {
+    display: inline-block;
+    position: absolute;
+    height: 80rpx;
+    width: 80rpx;
+    z-index: 99;
+    left: 652rpx; 
+    top: 10rpx;
+  }
+
+}
+

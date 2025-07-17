@@ -1,0 +1,15 @@
+.action-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow:nowrap;
+  justify-content:center;
+  align-items:center;
+  font-size: 24rpx;
+  .name{
+    color:#006699
+  }
+  .dataSourceLabel{
+    color:#990066
+  }
+}

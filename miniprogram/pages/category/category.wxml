@@ -1,0 +1,30 @@
+<!--pages/category/category.wxml-->
+<t-navbar title="产品" class="custom-navbar" left-arrow />
+
+<view class="category-container">
+  <view class="searchbox">
+    <!--搜索框-->
+    <t-search
+      value="{{keywords}}"
+      maxcharacter="15"
+      placeholder="请输入产品名称"
+      bind:change="changeHandle"
+      bind:action-click="searchCategory"
+      bind:submit="searchCategory"
+      bind:clear="clearHandle"
+    >
+    </t-search>
+
+  </view>
+
+  <table 
+    columns="{{tableColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    showTipImage="{{dataList.length===0&!getListLoading}}"
+    tableHeight = "{{tableheight}}"
+    generic:action-td="action-td"
+  />
+  <pagination currentInedex="{{page}}" total="{{total}}" bind:pagingChange="pageChange"></pagination>
+
+</view>

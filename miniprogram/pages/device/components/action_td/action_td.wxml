@@ -1,0 +1,17 @@
+<!--pages/device/components/action_td.wxml-->
+<view class="action-box" catchtap="handleClickItem" data-type="{{columns.key}}">
+  <block wx:if="{{columns.key === 'bicycleNum'}}">
+    <view class="bicycleNum">{{item.bicycleNum}}</view>
+  </block>
+  <block wx:elif="{{columns.key === 'deviceName'}}">
+    <view class="deviceName">{{item.deviceName}}</view>
+  </block>
+  <block wx:elif="{{columns.key === 'status'}}">
+    <view wx:if="{{item.status === 0}}" class="action-btn disable">离线</view>
+    <view wx:else class="action-btn enable">在线</view>
+  </block>
+  <block wx:elif="{{columns.key === 'categoryName'}}">
+    <view class="categoryName">{{item.categoryName}}</view>
+  </block>
+  
+</view>
